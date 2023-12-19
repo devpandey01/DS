@@ -1,7 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-#define SIZE 4
-
+#define SIZE 50
 int q[SIZE];
 int x=-1;
 int i,val,choice;
