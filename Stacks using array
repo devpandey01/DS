@@ -1,12 +1,24 @@
+/*
+Stacks using array
+
+Stack is called LIFO data structure where element that is inserted last is first taken out
+Each stack has a variable TOP which points to the address where the element will be added or deleted from the stack
+Also there is a variable MAX which is the maximum size of array
+During the push,pop function we check if the stack is full/empty. If full (TOP == MAX-1), we say stack overflow (no more elements can be added). 
+If empty(TOP==-1), we say stack underflow (no elements in the stack). 
+As stack follows LIFO, we display last inserted element first using for loop
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 #define SIZE 50
 
-int A[SIZE];
+int A[SIZE]; //array declaration
 int x=-1;
 int i,val,choice;
-int top=-1;
+int top=-1; //points to topmost element of the stack
 
+//Push function - used to add element to the stack 
 void push(int val){
     if(top==SIZE-1){
         printf("Stack is full\n");
@@ -17,6 +29,7 @@ void push(int val){
     }
 }
 
+//Pop function - Used to remove topmost element from the stack
 int pop(){
     if(top==-1){
         printf("Stack is empty\n");
@@ -28,6 +41,7 @@ int pop(){
     }
 }
 
+//Peek function - displays the topmost element of the stack
 void peek(){
     if(top==-1){
         printf("Stack is empty\n");
@@ -37,6 +51,7 @@ void peek(){
     }
 }
 
+//Display function - displays the elements of the stack
 void display(){
     if(top==-1){
         printf("Stack is empty\n");
@@ -49,6 +64,7 @@ void display(){
     }
 }
 
+//Menu driven code using while loop
 void main(){
     while(1){
     printf("-----MENU-----\n");
